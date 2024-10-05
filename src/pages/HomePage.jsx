@@ -9,8 +9,9 @@ import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <div>
-      <Header />
-      <HeroSection />
+       <Header/>
+      <HeroSection /> 
+
       <div className="content-sections">
         <FeaturedArticles />
         <LatestNews />

@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
-import GlobeComponent from "./GlobeComponent";
+import GlobeComponent from "../Model/GlobeComponent";
 import MarineLifeVideo from "../assets/images/MarineLife2.mp4"; // Adjust the path if necessary
 import OceanScene from "./OceanScene";
 
