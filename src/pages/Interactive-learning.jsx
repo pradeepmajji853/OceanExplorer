@@ -1,15 +1,17 @@
 import React from 'react';
 import Header from '../components/Header';
-import GlobeComponent from '../Model/GlobeComponent';
+import GlobeEmbed from '../Model/Earth';
+import './InteractiveLearning.css'; 
 
 const InteractiveLearning = () => {
-    return (
-        <div>
-            <Header/>
-            <GlobeComponent/>
-            
-        </div>
-    );
+  return (
+    <div className="GlobeContainer">
+      <Header />
+      <div  >
+        <GlobeEmbed />
+      </div>
+    </div>
+  );
 };
 
 export default InteractiveLearning;

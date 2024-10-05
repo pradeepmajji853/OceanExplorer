@@ -6,13 +6,12 @@ const GlobeComponent = () => {
 
   useEffect(() => {
     const globe = Globe()(globeEl.current)
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg') // Use a texture for the globe
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth.jpg') 
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-      .showAtmosphere(true) // Add atmosphere effect
+      .showAtmosphere(true) 
       .atmosphereColor('lightblue')
       .atmosphereAltitude(0.2);
 
-    // Example: Add markers or points on the globe
     globe
       .pointsData([
         { lat: 40.7128, lng: -74.0060, size: 0.1, color: 'red' }, // New York
@@ -26,3 +25,4 @@ const GlobeComponent = () => {
 };
 
 export default GlobeComponent;
+

@@ -1,30 +1,18 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
-import { TextureLoader } from 'three';
-import { useLoader } from '@react-three/fiber';
-import earthTexture from '../assets/images/texture.jpg'; 
+import React from 'react';
 
-function Earth() {
-  const texture = useLoader(TextureLoader, earthTexture);
-
+const GlobeEmbed = () => {
   return (
-    <mesh>
-      <sphereGeometry args={[5, 32, 32]} />
-      <meshStandardMaterial map={texture} />
-    </mesh>
+    <div style={{ position: 'relative', overflow: 'hidden', paddingTop: '56.25%' }}>
+      <iframe 
+        title="Earth Globe"
+        src="https://sketchfab.com/models/98d2b04d46474bafb4250cc75dc583b3/embed?autostart=1&ui_controls=0&ui_animations=0&ui_info=0" 
+        frameBorder="0" 
+        allowFullScreen 
+        allow="autoplay; encrypted-media"
+        style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+      ></iframe>
+    </div>
   );
-}
+};
 
-function EarthScene() {
-  return (
-    <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-      <Earth />
-      <Stars />
-      <OrbitControls enableZoom={true} />
-    </Canvas>
-  );
-}
-
-export default EarthScene;
+export default GlobeEmbed;
