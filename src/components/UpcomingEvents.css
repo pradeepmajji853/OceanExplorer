@@ -1,0 +1,27 @@
+.upcoming-events {
+    background-color: #f0f4f8;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  .upcoming-events h3 {
+    color: #0077b6;
+    font-size: 1.5rem;
+  }
+  
+  .upcoming-events ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .upcoming-events ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+  }
+  
+  .upcoming-events ul li:last-child {
+    border-bottom: none;
+  }
+  
