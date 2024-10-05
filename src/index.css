@@ -23,3 +23,24 @@ ul {
 li {
   list-style-type: none;
 }
+.slide {
+  padding: 40px;
+  text-align: center;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.prev-button, .next-button {
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #023e8a;
+}
