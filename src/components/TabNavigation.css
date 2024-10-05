@@ -1,0 +1,23 @@
+/* TabNavigation component styles */
+.tab-navigation {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .tab-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tab-navigation li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .tab-navigation .active {
+    border-bottom: 3px solid #00b0ff;
+  }
+  
