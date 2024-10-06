@@ -17,7 +17,7 @@ const TheOceanConservationPage = () => {
                 description="Discover how you can help protect our oceans"
             />
             <ProgressBar progress={100} /> 
-            <TabNavigation active="OC" />
+            <TabNavigation active="CE" />
             <OceanConservation/> 
             <PreviousButton text="Previous: The Ocean Ecosystem" previousPath="/the-threats-marine" />
             <NextButton text="Finished Learning : Learn-interatively" nextPath="/interactive-learning" /> 

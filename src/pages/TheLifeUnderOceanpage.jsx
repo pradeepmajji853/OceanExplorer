@@ -17,7 +17,7 @@ const TheLifeUnderOceanPage = () => {
                 description="Explore the diverse life forms inhabiting the depths of our oceans."
             />
             <ProgressBar progress={70} />
-            <TabNavigation active="OZ" />
+            <TabNavigation active="OL" />
 
             {/* Include the LifeUnderOcean component to display its content */}
             <LifeUnderOcean />

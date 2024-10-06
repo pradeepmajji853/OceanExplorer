@@ -17,7 +17,7 @@ const TheThreatsToMarineLifePage = () => {
                 description="Discover the various threats facing marine ecosystems and the urgent need for conservation efforts."
             />
             <ProgressBar progress={90} /> 
-            <TabNavigation active="TL" /> {/* Adjust the active tab as needed */}
+            <TabNavigation active="TML" /> {/* Adjust the active tab as needed */}
 
             {/* Include the ThreatsToMarineLife component to display its content */}
             <ThreatsToMarineLife />
