@@ -79,7 +79,6 @@ const oceanData = {
 };
 
 
-
 const OceanInfo = () => {
   const [selectedOcean, setSelectedOcean] = useState('Pacific Ocean');
 
@@ -340,4 +339,10 @@ const styles = `
   }
 `;
 
-export default OceanInfo;
+
+export default () => (
+  <>
+    <style>{styles}</style>
+    <OceanInfo />
+  </>
+);
