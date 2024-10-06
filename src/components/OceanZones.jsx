@@ -1,44 +1,68 @@
-import Interdial from '../assets/images/Interdial.jpg';
+import React, { useState } from 'react';
+import Interdial from '../assets/images/intertidal.jpg';
 import Neritic from '../assets/images/Neritic.jpg';
 import Oceanix from '../assets/images/Oceanix.jpg';
 import Benthic from '../assets/images/Benthic.jpg';
-import "./OceanZones.css";
+import ZoneDetails from './ZoneDetails';
+import './OceanZones.css';
+
 const zones = [
   {
     name: 'Intertidal Zone',
-    description: 'This zone is the area between the high and low tide marks. It is alternately covered and uncovered by the tides.',
-    imgSrc: Interdial
+    description: 'The ocean is a vast expanse divided into distinct zones, each teeming with life and characterized by unique ecosystems. The intertidal zone, where land meets sea, experiences the rhythmic ebb and flow of tides, supporting diverse organisms adapted to fluctuating conditions.',
+    imgSrc: Interdial,
   },
   {
     name: 'Neritic Zone',
-    description: 'This zone extends from the low tide mark to the edge of the continental shelf. It is relatively shallow and receives a lot of sunlight.',
-    imgSrc: Neritic
+    description: 'The neritic zone is a vibrant and crucial part of the ocean ecosystem, extending from the low tide mark to the edge of the continental shelf. This relatively shallow region is characterized by abundant sunlight, allowing for photosynthesis and supporting a rich diversity of marine life.',
+    imgSrc: Neritic,
   },
   {
     name: 'Oceanic Zone',
-    description: 'This zone is the open ocean beyond the continental shelf. It is deeper and receives less sunlight than the neritic zone.',
-    imgSrc: Oceanix
+    description: 'The oceanic zone, often referred to as the open ocean, lies beyond the continental shelf and encompasses vast, deep waters. This zone is characterized by its significant depth, which contributes to reduced sunlight penetration compared to the shallower neritic zone.',
+    imgSrc: Oceanix,
   },
   {
     name: 'Benthic Zone',
-    description: 'This zone is the ocean floor. It can be divided into the littoral zone, the sublittoral zone, the bathyal zone, the abyssal zone, and the hadal zone.',
-    imgSrc: Benthic
+    description: 'The benthic zone refers to the ocean floor and is one of the most diverse and complex ecosystems in the marine environment. It can be subdivided into several layers, including the littoral zone, which is the area closest to shore, and the sublittoral zone, which extends to the continental shelf.',
+    imgSrc: Benthic,
   }
 ];
 
-  
-
 const OceanZones = () => {
+  const [selectedZone, setSelectedZone] = useState(null);
+
+  const handleZoneClick = (zone) => {
+    setSelectedZone(zone);
+  };
+
+  const handleCloseDetails = () => {
+    setSelectedZone(null);
+  };
+
   return (
-    <div className="ocean-zones">
-      {zones.map((zone, index) => (
-        <div className="zone" key={index}>
-          <img src={zone.imgSrc} alt={zone.name} />
-          <h3>{zone.name}</h3>
-          <p>{zone.description}</p>
-        </div>
-      ))}
-    </div>
+    <section className="ocean-zones">
+      <div className="zones-header">
+        <h1>The Various Ocean Zones</h1>
+        <p className="header-description">
+          Explore the different zones of the ocean, each with its unique characteristics and ecosystems, showcasing the diversity of life beneath the waves.
+        </p>
+      </div>
+
+      <div className="zones-list">
+        {zones.map((zone, index) => (
+          <div className="zone" key={index} onClick={() => handleZoneClick(zone)}>
+            <img src={zone.imgSrc} alt={zone.name} className="zone-image" />
+            <h3>{zone.name}</h3>
+            <p>{zone.description}</p>
+          </div>
+        ))}
+      </div>
+
+      {selectedZone && (
+        <ZoneDetails zone={selectedZone} onClose={handleCloseDetails} />
+      )}
+    </section>
   );
 };
 

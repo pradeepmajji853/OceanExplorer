@@ -1,0 +1,45 @@
+.conservation-efforts {
+    margin: 40px 0; /* Space above and below the section */
+    padding: 20px; /* Padding inside the section */
+    background-color: #f0f8ff; /* Light background color for visibility */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .conservation-efforts h2 {
+    font-size: 28px; /* Font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .conservation-efforts p {
+    font-size: 16px; /* Font size for the paragraphs */
+    margin-bottom: 15px; /* Space below paragraphs */
+  }
+  
+  .efforts-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .efforts-list li {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center vertically */
+    margin-bottom: 20px; /* Space below each list item */
+    padding: 10px; /* Padding inside the list item */
+    border: 1px solid #d1e7dd; /* Light border around each item */
+    border-radius: 5px; /* Rounded corners for the list items */
+    background-color: #ffffff; /* White background for contrast */
+  }
+  
+  .efforts-image {
+    width: 80px; /* Fixed width for images */
+    height: 80px; /* Fixed height for images */
+    border-radius: 50%; /* Circular images */
+    margin-right: 15px; /* Space between image and text */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+  
+  .call-to-action {
+    font-weight: bold; /* Make the call to action bold */
+    margin-top: 20px; /* Space above the call to action */
+  }
