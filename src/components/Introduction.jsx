@@ -1,5 +1,7 @@
 import React from 'react';
 import './Introduction.css';
+import coral from '../assets/images/oceaniczone.jpg';
+import deepsea from '../assets/images/kelpforest.jpg';
 
 const Introduction = () => {
   return (
@@ -24,12 +26,12 @@ const Introduction = () => {
 
         <div className="introduction-images">
           <img
-            src="https://example.com/coral-reef.jpg"
+            src={coral}
             alt="Coral Reef Ecosystem"
             className="intro-image"
           />
           <img
-            src="https://example.com/deep-ocean.jpg"
+            src={deepsea}
             alt="Deep Ocean Ecosystem"
             className="intro-image"
           />
