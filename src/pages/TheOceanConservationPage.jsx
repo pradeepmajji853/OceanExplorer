@@ -20,7 +20,7 @@ const TheOceanConservationPage = () => {
             <TabNavigation active="OC" />
             <OceanConservation/> 
             <PreviousButton text="Previous: The Ocean Ecosystem" previousPath="/the-threats-marine" />
-            <NextButton text="Next: The Ocean Life" nextPath="/" /> 
+            <NextButton text="Finished Learning : Learn-interatively" nextPath="/interactive-learning" /> 
             <Footer />
         </div>
     );
