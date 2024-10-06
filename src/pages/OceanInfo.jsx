@@ -25,10 +25,10 @@ const oceanData = {
     ],
     marineLife: [
       { name: 'Humpback Whale', type: 'Mammal', image: '/Humpbackwhale.jpg' },
-      { name: 'Atlantic Cod', type: 'Fish', image: '/api/placeholder/150/150' },
-      { name: 'Leatherback Turtle', type: 'Reptile', image: '/api/placeholder/150/150' },
-      { name: 'Giant Squid', type: 'Mollusk', image: '/api/placeholder/150/150' },
-      { name: 'Atlantic Puffin', type: 'Bird', image: '/api/placeholder/150/150' }
+      { name: 'Atlantic Cod', type: 'Fish', image: '/AlanticCod.jpg' },
+      { name: 'Leatherback Turtle', type: 'Reptile', image: '/LeatherBackTurtle.jpg' },
+      { name: 'Giant Squid', type: 'Mollusk', image: '/giant squid.jpg' },
+      { name: 'Atlantic Puffin', type: 'Bird', image: '/AtlanticPuffin.jpg' }
     ]
   },
   'Indian Ocean': {
@@ -39,11 +39,11 @@ const oceanData = {
       'The Indian Ocean is the warmest ocean in the world.'
     ],
     marineLife: [
-      { name: 'Bengal Tiger', type: 'Mammal', image: '/api/placeholder/150/150' },
-      { name: 'Dugong', type: 'Mammal', image: '/api/placeholder/150/150' },
-      { name: 'Whale Shark', type: 'Fish', image: '/api/placeholder/150/150' },
-      { name: 'Saltwater Crocodile', type: 'Reptile', image: '/api/placeholder/150/150' },
-      { name: 'Red Lionfish', type: 'Fish', image: '/api/placeholder/150/150' }
+      { name: 'PufferFish', type: 'Mammal', image: '/PufferFish.png' },
+      { name: 'Dugong', type: 'Mammal', image: '/dugong.jpg' },
+      { name: 'Whale Shark', type: 'Fish', image: '/WhaleShark.jpg' },
+      { name: 'Box Jelly Fish', type: 'Mammal', image: '/BoxJellyFish.png' },
+      { name: 'Red Lionfish', type: 'Fish', image: '/RedLionFish.jpeg' }
     ]
   },
   'Southern Ocean': {
@@ -54,11 +54,11 @@ const oceanData = {
       'The Southern Ocean is home to the world\'s largest marine protected area.'
     ],
     marineLife: [
-      { name: 'Emperor Penguin', type: 'Bird', image: '/api/placeholder/150/150' },
-      { name: 'Leopard Seal', type: 'Mammal', image: '/api/placeholder/150/150' },
-      { name: 'Antarctic Krill', type: 'Crustacean', image: '/api/placeholder/150/150' },
-      { name: 'Colossal Squid', type: 'Mollusk', image: '/api/placeholder/150/150' },
-      { name: 'Antarctic Toothfish', type: 'Fish', image: '/api/placeholder/150/150' }
+      { name: 'Emperor Penguin', type: 'Bird', image: '/EmporerPenguin.jpg' },
+      { name: 'Leopard Seal', type: 'Mammal', image: '/LeopardSeal.jpg' },
+      { name: 'Antarctic Krill', type: 'Crustacean', image: '/public/antractickrill.jpg' },
+      { name: 'Colossal Squid', type: 'Mollusk', image: '/ColossalSquid.jpg' },
+      { name: 'Antarctic Toothfish', type: 'Fish', image: '/public/AntracticToothFish.jpg' }
     ]
   },
   'Arctic Ocean': {
@@ -69,11 +69,11 @@ const oceanData = {
       'The Arctic Ocean experiences 24 hours of daylight in summer and 24 hours of darkness in winter.'
     ],
     marineLife: [
-      { name: 'Polar Bear', type: 'Mammal', image: '/api/placeholder/150/150' },
-      { name: 'Narwhal', type: 'Mammal', image: '/api/placeholder/150/150' },
-      { name: 'Arctic Cod', type: 'Fish', image: '/api/placeholder/150/150' },
-      { name: 'Walrus', type: 'Mammal', image: '/api/placeholder/150/150' },
-      { name: 'Beluga Whale', type: 'Mammal', image: '/api/placeholder/150/150' }
+      { name: 'Polar Bear', type: 'Mammal', image: '/PolarBeer.jpg' },
+      { name: 'Narwhal', type: 'Mammal', image: '/Narwhal.jpg' },
+      { name: 'Arctic Cod', type: 'Fish', image: '/ArcticCod.jpg' },
+      { name: 'Walrus', type: 'Mammal', image: '/Walrus.jpg' },
+      { name: 'Beluga Whale', type: 'Mammal', image: '/BelugaWhale.jpg' }
     ]
   }
 };
@@ -136,207 +136,184 @@ const OceanInfo = () => {
 
 const styles = `
   .ocean-info-192-container {
-    margin-top: 100px;
-    display: flex;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #e0f7fa, #80deea);
-    overflow: hidden;
-  }
+  margin-top: 100px;
+  display: flex;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100vh; /* Full height for better layout */
+  background: linear-gradient(to bottom, #e0f7fa, #80deea);
+  overflow: hidden;
+}
 
-  .ocean-info-192-sidebar {
-    width: 20%;
-    min-width: 150px;
-    padding: 1rem;
-    background-color: #f7f7f7;
-    overflow-y: auto;
-    height: 100%;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
+.ocean-info-192-sidebar {
+  width: 20%;
+  min-width: 200px; /* Slightly wider for a better look */
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
 
-  .ocean-info-192-sidebar:hover {
-    transform: scale(1.02);
-  }
+.ocean-info-192-sidebar:hover {
+  transform: scale(1.02);
+}
 
-  .ocean-info-sidebar-title {
-    margin-top: 0;
-    color: #0077be;
-  }
+.ocean-info-sidebar-192-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0077be;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #0077be;
+  padding-bottom: 0.5rem;
+}
 
-  .ocean-info-192-sidebar-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+.ocean-info-192-sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .ocean-info-192-sidebar-item {
-    margin-bottom: 0.5rem;
-    color: #666;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
+.ocean-info-sidebar-item {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  cursor: pointer;
+  background-color: #e3f2fd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .ocean-info-192-sidebar-item:hover, .ocean-info-sidebar-item-active {
-    color: #0077be;
-    font-weight: bold;
-  }
+.ocean-info-192-sidebar-item:hover,
+.ocean-info-sidebar-item-active {
+  background-color: #0077be;
+  color: #fff;
+  font-weight: bold;
+}
 
-  .ocean-info-main-192-content {
-    flex: 1;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
+.ocean-info-main-192-content {
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-  .ocean-info-scrollable-192-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 1rem;
-    position: relative;
-    animation: ocean-info-fadeIn 0.5s ease;
-  }
+.ocean-info-scrollable-192-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  position: relative;
+  animation: ocean-info-fadeIn 0.5s ease;
+}
 
-  .ocean-info-header-192-image {
-    margin-bottom: 1rem;
-    animation: ocean-info-float 6s ease-in-out infinite;
-  }
+.ocean-info-header-192-image {
+  margin-bottom: 1rem;
+  animation: ocean-info-float 6s ease-in-out infinite;
+}
 
-  .ocean-info-header-img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.ocean-info-header-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  .ocean-info-192-title {
-    color: #0077be;
-    margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
+.ocean-info-192-title {
+  color: #0077be;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 
-  .ocean-info-192-subtitle {
-    color: #666;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
+.ocean-info-192-subtitle {
+  color: #666;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 
-  .ocean-info-192-text {
-    color: #333;
-    line-height: 1.6;
-  }
+.ocean-info-192-text {
+  color: #333;
+  line-height: 1.6;
+}
 
-  .ocean-info-facts-list {
-    list-style-type: none;
-    padding: 0;
-  }
+.ocean-info-facts-192-list {
+  list-style-type: none;
+  padding: 0;
+}
 
-  .ocean-info-fact-192-item {
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
-  }
+.ocean-info-fact-item {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
 
-  .ocean-info-fact-192-item::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #0077be;
-    animation: ocean-info-bounce 1s infinite;
-  }
+.ocean-info-fact-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0077be;
+  font-size: 1.5rem;
+}
 
-  .ocean-info-marine-192-life {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+.ocean-info-marine-192-life {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  .ocean-info-192-animal {
-    text-align: center;
-    width: 18%;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-    position: relative;
-  }
+.ocean-info-192-animal {
+  text-align: center;
+  width: 18%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+  position: relative;
+}
 
-  .ocean-info-192-animal:hover {
-    transform: scale(1.1);
-    z-index: 1;
-  }
+.ocean-info-192-animal:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
 
-  .ocean-info-animal-192-img {
-    width: 100%;          /* Full width of the card */
-    height: 150px;       /* Define a fixed height for the images */
-    object-fit: contain; /* Ensure images fit within the defined height */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease;
-  }
+.ocean-info-animal-192-img {
+  width: 100%; /* Full width of the card */
+  height: 150px; /* Define a fixed height for the images */
+  object-fit: contain; /* Ensure images fit within the defined height */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .ocean-info-animal-192-img:hover {
-    opacity: 0.8;
-  }
+.ocean-info-animal-192-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
 
-  .ocean-info-animal-192-name {
-    margin: 0.25rem 0;
-    font-size: 0.875rem;
-  }
+.ocean-info-animal-192-type {
+  color: #777;
+  font-size: 0.9rem;
+}
 
-  .ocean-info-animal-192-type {
-    font-style: italic;
-    color: #888;
-  }
+/* Animations */
+@keyframes ocean-info-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  @media (max-width: 768px) {
-    .ocean-info-container {
-      flex-direction: column;
-    }
+@keyframes ocean-info-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
-    .ocean-info-192-sidebar {
-      width: 100%;
-      height: auto;
-      max-height: 30vh;
-    }
-
-    .ocean-info-main-192-content {
-      height: auto;
-    }
-
-    .ocean-info-192-animal {
-      width: 48%;
-    }
-  }
-
-  @keyframes ocean-info-fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes ocean-info-float {
-    0%, 100% {
-      transform: translatey(0);
-    }
-    50% {
-      transform: translatey(-10px);
-    }
-  }
-
-  @keyframes ocean-info-bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-  }
 `;
 
 
