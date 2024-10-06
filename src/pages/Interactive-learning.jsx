@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import GlobeEmbed from '../Model/Earth';
 import './InteractiveLearning.css';
 import OceanInfo from './OceanInfo';
+import BackgroundAudio from '../components/BackgroundAudio';
 
 const InteractiveLearning = () => {
   const [show3DAnimation, setShow3DAnimation] = useState(false);
@@ -10,10 +11,12 @@ const InteractiveLearning = () => {
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [showOceanFacts, setShowOceanFacts] = useState(false);
   const [clicked, setClicked] = useState(true);
+  const [playAudio, setPlayAudio] = useState(true); // State to control audio playback
 
   const handleNextClick = () => {
     setClicked(false);
     setShow3DAnimation(true); // Show the OceanInfo component directly
+    setPlayAudio(false); // Stop the background audio when the button is clicked
   };
 
   useEffect(() => {
@@ -36,6 +39,7 @@ const InteractiveLearning = () => {
 
   return (
     <div className="interactive-learning-container">
+      {playAudio && <BackgroundAudio />}
       <Header />
 
       <div className="globe-container">
