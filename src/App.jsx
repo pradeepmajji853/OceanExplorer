@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./pages/HomePage"; 
 import InteractiveLearning from './pages/Interactive-learning'; 
 import Resources from './pages/Resources';
-import TheOceanEcoSystemPage from './pages/TheOceanEcoSystemPage'; 
+import TheOceanEcoSystempage from './pages/TheOceanEcoSystempage'; 
 import TheOceanZonesPage from './pages/TheOceanZonespage'; 
 import TheLifeUnderOceanPage from './pages/TheLifeUnderOceanpage'; 
 import TheThreatsToMarineLifePage from './pages/TheThreatsToMarineLifePage';
@@ -19,7 +19,7 @@ function App() {
           <Route path="/the-ocean-zones" element={<TheOceanZonesPage />} />
           <Route path="/the-ocean-life" element={<TheLifeUnderOceanPage />} /> 
           <Route path="/the-threats-marine" element={<TheThreatsToMarineLifePage />} />
-          <Route path="/the-ocean-conservation" element={<TheOceanConservationPage />} />
+          <Route path="/the-ocean-conservation" element={<TheOceanConservationpage />} />
           <Route path="/interactive-learning" element={<InteractiveLearning />} />
           <Route path="/resources" element={<Resources />} />
         </Routes>
