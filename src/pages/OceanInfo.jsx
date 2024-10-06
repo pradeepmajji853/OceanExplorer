@@ -56,9 +56,9 @@ const oceanData = {
     marineLife: [
       { name: 'Emperor Penguin', type: 'Bird', image: '/EmporerPenguin.jpg' },
       { name: 'Leopard Seal', type: 'Mammal', image: '/LeopardSeal.jpg' },
-      { name: 'Antarctic Krill', type: 'Crustacean', image: '/public/antractickrill.jpg' },
+      { name: 'Antarctic Krill', type: 'Crustacean', image: '/antractickrill.jpg' },
       { name: 'Colossal Squid', type: 'Mollusk', image: '/ColossalSquid.jpg' },
-      { name: 'Antarctic Toothfish', type: 'Fish', image: '/public/AntracticToothFish.jpg' }
+      { name: 'Antarctic Toothfish', type: 'Fish', image: '/AntracticToothFish.jpg' }
     ]
   },
   'Arctic Ocean': {
