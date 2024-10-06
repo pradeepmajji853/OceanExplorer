@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #000; /* Background for the globe container */
+    background-color: #000;
   }
   
   /* Info card styling */
@@ -10,30 +10,44 @@
     position: absolute;
     top: 20%;
     right: 5%;
-    width: 300px;
+    width: 350px;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 10;
+    font-family: Arial, sans-serif;
   }
   
   .info-card h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 26px;
     color: #007bff;
   }
   
-  .info-card p {
-    margin-bottom: 20px;
+  .ocean-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
   }
   
-  .info-card button {
-    padding: 8px 12px;
+  .ocean-info strong {
+    color: #333;
+  }
+  
+  .close-button {
+    padding: 10px 15px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .close-button:hover {
+    background-color: #0056b3;
   }
   
