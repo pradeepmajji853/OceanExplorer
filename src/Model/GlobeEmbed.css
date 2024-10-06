@@ -1,0 +1,39 @@
+.globe-embed-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Background for the globe container */
+  }
+  
+  /* Info card styling */
+  .info-card {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .info-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #007bff;
+  }
+  
+  .info-card p {
+    margin-bottom: 20px;
+  }
+  
+  .info-card button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
