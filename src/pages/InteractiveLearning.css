@@ -1,12 +1,102 @@
 
-  
-  .GlobeContainer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    flex: 1; 
-  
-    
+
+.interactive-learning-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header stays fixed at the top */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* The globe-container holds both the text and the globe */
+.globe-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the start */
+}
+
+/* Typewriter text effect positioned on top of the globe */
+.typewriter-text {
+  position: absolute;
+  z-index: 20;
+  font-size: 24px; /* Increased font size */
+  font-family: 'Arial', sans-serif; /* Changed font */
+  color: #f0f0f0; /* Light color for text */
+  text-align: center; /* Center text */
+  padding: 20px;
+  width: 80%; /* Limit width for better readability */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center adjustment */
+  top: 20%; /* Position text towards the top */
+}
+
+/* Ocean facts styling */
+.ocean-facts {
+  position: absolute;
+  z-index: 20;
+  bottom: 5%; /* Position at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center adjustment */
+  font-size: 22px; /* Increased font size */
+  font-family: 'Arial', sans-serif; /* Changed font */
+  color: #f0f0f0; /* Light color for text */
+  padding: 10px;
+  text-align: center; /* Center align text within the card */
+}
+
+/* Ocean-themed button styling */
+.ocean-button {
+  margin-top: 10px; /* Add some space above the button */
+  padding: 10px 20px; /* Add padding for better appearance */
+  font-size: 18px; /* Font size for the button */
+  background-color: #007bff; /* Ocean blue background for the button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.ocean-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Globe embed is positioned as the background */
+.GlobeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fullscreen video style */
+.fullscreen-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.fade-in-animation {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards; /* Duration of 0.5 seconds */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
- 
+}
+

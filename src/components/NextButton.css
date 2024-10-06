@@ -1,0 +1,24 @@
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Align Previous to the left and Next to the right */
+    padding: 20px; /* Add some padding around the container */
+  }
+  
+  .previous-button,
+  .next-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .previous-button:hover,
+  .next-button:hover {
+    background-color: #0056b3;
+  }
+  

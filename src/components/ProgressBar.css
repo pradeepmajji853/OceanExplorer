@@ -1,0 +1,23 @@
+/* ProgressBar component styles */
+.progress-bar {
+    margin: 10px auto;
+    width: 80%;
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .progress-bar .progress {
+    height: 100%;
+    background-color: #00b0ff;
+    border-radius: 10px;
+  }
+  
+  .progress-bar span {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 12px;
+  }
+  

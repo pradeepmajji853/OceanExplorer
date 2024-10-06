@@ -1,0 +1,77 @@
+.threat-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .threat-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .close-button {
+    margin-top: 10px;
+  }
+  .modal-overlay {
+    position: fixed; /* Use fixed positioning to cover the entire viewport */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex; /* Use flexbox to center the modal */
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .threat-details {
+    background: white; /* White background for the modal */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the modal */
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  }
+  
+  .close-button {
+    background-color: #f44336; /* Red background for close button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding around button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below button */
+  }
+  
+  .threat-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .threat-detail-image {
+    width: 200px; /* Set a fixed width for consistency */
+    height: 150px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensure images are well-fitted */
+  }
+  
+  .threat-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .threat-additional-info {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
