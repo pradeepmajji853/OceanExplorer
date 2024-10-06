@@ -107,7 +107,7 @@ const OceanInfo = () => {
       <div className="ocean-info-main-192-content">
         <div className="ocean-info-scrollable-192-content">
           <div className="ocean-info-header-192-image">
-            <img src="/Pacific.jpg" alt="Ocean life illustration" className="ocean-info-header-img" />
+            <img src="/Lifebelowwater.png" alt="Ocean life illustration" className="ocean-info-header-img" />
           </div>
           <h1 className="ocean-info-192-title">{selectedOcean}</h1>
           <h2 className="ocean-info-192-subtitle">Introduction</h2>
